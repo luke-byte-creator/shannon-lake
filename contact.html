@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Shannon Lake Saskatchewan</title>
+  <meta name="description" content="Request information about lots for sale or seasonal RV options at Shannon Lake, Saskatchewan (near Wakaw Lake, about 1 hour east of Saskatoon via Highway 41)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Shannon Lake</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="lots.html">Lots for Sale</a>
+        <a href="rv-park.html">RV Park</a>
+        <a class="active" href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Request Information</h1>
+    <p class="lead">
+      Tell us what you’re interested in and we’ll send you availability and next steps.
+      Prefer email? <a href="mailto:Info@sunsetonshannon.com">Info@sunsetonshannon.com</a>
+    </p>
+
+    <div class="card">
+      <!-- We’ll replace the action URL with your Formspree endpoint in a later step -->
+      <form method="post" action="#">
+        <label>
+          Full Name
+          <input name="name" autocomplete="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label>
+          Phone
+          <input name="phone" autocomplete="tel" required />
+        </label>
+
+        <label>
+          I’m interested in
+          <select name="interest" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Buying a lake lot</option>
+            <option>Seasonal RV spot</option>
+            <option>Both</option>
+          </select>
+        </label>
+
+        <label>
+          Message (optional)
+          <textarea name="message" rows="4" placeholder="Any questions or timing?"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send</button>
+        <p class="muted small">
+          We’ll only use your info to respond to your request.
+        </p>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p class="disclaimer">
+        Disclaimer: Information is subject to change without notice. Availability may change at any time.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
