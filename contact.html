@@ -20,53 +20,66 @@
     </div>
   </header>
 
-  <main class="wrap page">
-    <h1>Request Information</h1>
-    <p class="lead">
-      Tell us what you’re interested in and we’ll send you availability and next steps.
-      Prefer email? <a href="mailto:ljjansen6767@gmail.com">ljjansen6767@gmail.com</a>
-    </p>
+ <main class="wrap page">
+  <h1>Request Information</h1>
+  <p class="lead">
+    Tell us what you’re interested in and we’ll send you availability and next steps.
+    Prefer email? <a href="mailto:Info@sunsetonshannon.com">Info@sunsetonshannon.com</a>
+  </p>
 
-    <div class="card">
-      <!-- We’ll replace the action URL with your Formspree endpoint in a later step -->
-      <form method="post" action="https://formspree.io/f/xnjnkqzd">
-      <input type="hidden" name="_redirect" value="https://shannon-lake.pages.dev/thanks.html">
-        <label>
-          Full Name
-          <input name="name" autocomplete="name" required />
-        </label>
+  <div class="card">
+    <form
+      method="POST"
+      action="https://formspree.io/f/xnjnkqzd"
+      accept-charset="UTF-8"
+    >
+      <!-- Redirect after successful submission -->
+      <input type="hidden" name="_redirect" value="https://shannon-lake.pages.dev/thanks.html" />
 
-        <label>
-          Email
-          <input type="email" name="email" autocomplete="email" required />
-        </label>
+      <!-- Helpful email metadata -->
+      <input type="hidden" name="_subject" value="New Shannon Lake Website Lead" />
 
-        <label>
-          Phone
-          <input name="phone" autocomplete="tel" required />
-        </label>
+      <label>
+        Full Name
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
 
-        <label>
-          I’m interested in
-          <select name="interest" required>
-            <option value="" selected disabled>Select one</option>
-            <option>Buying a lake lot</option>
-            <option>Seasonal RV spot</option>
-            <option>Both</option>
-          </select>
-        </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
 
-        <label>
-          Message (optional)
-          <textarea name="message" rows="4" placeholder="Any questions or timing?"></textarea>
-        </label>
+      <!-- Lets you hit Reply in the lead email and respond to the lead -->
+      <input type="hidden" name="_replyto" value="%{email}" />
 
-        <button class="btn" type="submit">Send</button>
-        <p class="muted small">
-          We’ll only use your info to respond to your request.
-        </p>
-      </form>
-    </div>
+      <label>
+        Phone
+        <input type="tel" name="phone" autocomplete="tel" required />
+      </label>
+
+      <label>
+        I’m interested in
+        <select name="interest" required>
+          <option value="" selected disabled>Select one</option>
+          <option value="Buying a lake lot">Buying a lake lot</option>
+          <option value="Seasonal RV spot">Seasonal RV spot</option>
+          <option value="Both">Both</option>
+        </select>
+      </label>
+
+      <label>
+        Message (optional)
+        <textarea name="message" rows="4" placeholder="Any questions or timing?"></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send</button>
+
+      <p class="muted small">
+        We’ll only use your info to respond to your request.
+      </p>
+    </form>
+  </div>
+</main>
 
     <footer class="footer">
       <p class="disclaimer">
