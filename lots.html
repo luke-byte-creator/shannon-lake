@@ -4,9 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Lots for Sale | Shannon Lake Saskatchewan</title>
-  <meta name="description" content="Lakeside lots for sale at Shannon Lake, Saskatchewan — about 1 hour east of Saskatoon via Highway 41, near Wakaw Lake. Request information for current availability." />
+  <meta name="description" content="Lakeside lots for sale at Shannon Lake, Saskatchewan — about 1 hour east of Saskatoon via Highway 41, near Wakaw Lake. View lots and request information." />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: makes shares look good -->
+  <meta property="og:title" content="Lots for Sale | Shannon Lake Saskatchewan" />
+  <meta property="og:description" content="View lots at Shannon Lake, Saskatchewan — near Wakaw Lake, about 1 hour east of Saskatoon via Highway 41." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://shannon-lake.pages.dev/assets/drone-1.jpg" />
+  <meta property="og:url" content="https://shannon-lake.pages.dev/lots.html" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -23,26 +32,424 @@
   <main class="wrap page">
     <h1>Lots for Sale</h1>
     <p class="lead">
-      Lakeside lots are available now at Shannon Lake, Saskatchewan. For pricing and current availability, request
-      information and we’ll send the details.
+      Explore available lots at Shannon Lake, Saskatchewan — a quiet, private escape near Wakaw Lake,
+      about 1 hour east of Saskatoon via Highway 41.
     </p>
 
-    <div class="card">
-      <h2>Current availability</h2>
-      <p class="muted">We’ll add lot map + “available / sold” indicators here next.</p>
-      <a class="btn" href="contact.html">Request Information</a>
-    </div>
-    
-      <div class="sticky-cta" role="region" aria-label="Request information">
-        <a class="sticky-btn" href="contact.html">Request Information</a>
-        <a class="sticky-btn sticky-ghost" href="mailto:Info@sunsetonshannon.com">Email</a>
+    <!-- MAP / LOT PLAN (placeholder for now) -->
+    <section class="lots-section">
+      <div class="section-head">
+        <h2>Lot Map</h2>
+        <p class="muted">
+          Lot map coming soon. This area will be replaced with a map image at the top of the page.
+        </p>
       </div>
+
+      <div class="map-placeholder" aria-label="Lot map placeholder">
+        <div class="map-placeholder-inner">
+          <p><strong>Lot Map Placeholder</strong></p>
+          <p class="muted small">Replace with: <code>assets/lots/lot-map.jpg</code> later</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS (not a CTA; just helps browsing) -->
+    <section class="lots-section">
+      <div class="section-head">
+        <h2>Browse Lots</h2>
+        <p class="muted">Filter by status and tap any lot to view a larger photo.</p>
+      </div>
+
+      <div class="lots-toolbar" aria-label="Lot filters">
+        <label class="filter">
+          Status
+          <select id="statusFilter">
+            <option value="all" selected>All</option>
+            <option value="available">Available</option>
+            <option value="hold">Hold</option>
+            <option value="sold">Sold</option>
+          </select>
+        </label>
+
+        <div class="legend" aria-label="Status legend">
+          <span class="pill pill-available">Available</span>
+          <span class="pill pill-hold">Hold</span>
+          <span class="pill pill-sold">Sold</span>
+        </div>
+      </div>
+
+      <!-- LOT GRID -->
+      <div class="lot-grid" id="lotGrid">
+
+        <!--
+          HOW TO SET STATUS:
+          Change data-status="available" to "hold" or "sold" per lot.
+          Later, we can auto-generate this from a JSON list if you want.
+        -->
+
+        <!-- Lots 1–42 -->
+        <figure class="lot-card" data-lot="1" data-status="available" data-notes="Placeholder details for Lot 1. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot1.jpg" alt="Shannon Lake Lot 1" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 1</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="2" data-status="available" data-notes="Placeholder details for Lot 2. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot2.jpg" alt="Shannon Lake Lot 2" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 2</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="3" data-status="available" data-notes="Placeholder details for Lot 3. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot3.jpg" alt="Shannon Lake Lot 3" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 3</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="4" data-status="available" data-notes="Placeholder details for Lot 4. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot4.jpg" alt="Shannon Lake Lot 4" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 4</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="5" data-status="available" data-notes="Placeholder details for Lot 5. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot5.jpg" alt="Shannon Lake Lot 5" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 5</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="6" data-status="available" data-notes="Placeholder details for Lot 6. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot6.jpg" alt="Shannon Lake Lot 6" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 6</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="7" data-status="available" data-notes="Placeholder details for Lot 7. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot7.jpg" alt="Shannon Lake Lot 7" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 7</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="8" data-status="available" data-notes="Placeholder details for Lot 8. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot8.jpg" alt="Shannon Lake Lot 8" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 8</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="9" data-status="available" data-notes="Placeholder details for Lot 9. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot9.jpg" alt="Shannon Lake Lot 9" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 9</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="10" data-status="available" data-notes="Placeholder details for Lot 10. Add size, orientation, services, etc.">
+          <img src="assets/lots/lot10.jpg" alt="Shannon Lake Lot 10" loading="lazy" />
+          <figcaption>
+            <span class="lot-label">Lot 10</span>
+            <span class="status-badge status-available">Available</span>
+          </figcaption>
+        </figure>
+
+        <!-- 11–20 -->
+        <figure class="lot-card" data-lot="11" data-status="available" data-notes="Placeholder details for Lot 11.">
+          <img src="assets/lots/lot11.jpg" alt="Shannon Lake Lot 11" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 11</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="12" data-status="available" data-notes="Placeholder details for Lot 12.">
+          <img src="assets/lots/lot12.jpg" alt="Shannon Lake Lot 12" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 12</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="13" data-status="available" data-notes="Placeholder details for Lot 13.">
+          <img src="assets/lots/lot13.jpg" alt="Shannon Lake Lot 13" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 13</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="14" data-status="available" data-notes="Placeholder details for Lot 14.">
+          <img src="assets/lots/lot14.jpg" alt="Shannon Lake Lot 14" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 14</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="15" data-status="available" data-notes="Placeholder details for Lot 15.">
+          <img src="assets/lots/lot15.jpg" alt="Shannon Lake Lot 15" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 15</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="16" data-status="available" data-notes="Placeholder details for Lot 16.">
+          <img src="assets/lots/lot16.jpg" alt="Shannon Lake Lot 16" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 16</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="17" data-status="available" data-notes="Placeholder details for Lot 17.">
+          <img src="assets/lots/lot17.jpg" alt="Shannon Lake Lot 17" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 17</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="18" data-status="available" data-notes="Placeholder details for Lot 18.">
+          <img src="assets/lots/lot18.jpg" alt="Shannon Lake Lot 18" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 18</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="19" data-status="available" data-notes="Placeholder details for Lot 19.">
+          <img src="assets/lots/lot19.jpg" alt="Shannon Lake Lot 19" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 19</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="20" data-status="available" data-notes="Placeholder details for Lot 20.">
+          <img src="assets/lots/lot20.jpg" alt="Shannon Lake Lot 20" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 20</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <!-- 21–30 -->
+        <figure class="lot-card" data-lot="21" data-status="available" data-notes="Placeholder details for Lot 21.">
+          <img src="assets/lots/lot21.jpg" alt="Shannon Lake Lot 21" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 21</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="22" data-status="available" data-notes="Placeholder details for Lot 22.">
+          <img src="assets/lots/lot22.jpg" alt="Shannon Lake Lot 22" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 22</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="23" data-status="available" data-notes="Placeholder details for Lot 23.">
+          <img src="assets/lots/lot23.jpg" alt="Shannon Lake Lot 23" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 23</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="24" data-status="available" data-notes="Placeholder details for Lot 24.">
+          <img src="assets/lots/lot24.jpg" alt="Shannon Lake Lot 24" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 24</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="25" data-status="available" data-notes="Placeholder details for Lot 25.">
+          <img src="assets/lots/lot25.jpg" alt="Shannon Lake Lot 25" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 25</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="26" data-status="available" data-notes="Placeholder details for Lot 26.">
+          <img src="assets/lots/lot26.jpg" alt="Shannon Lake Lot 26" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 26</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="27" data-status="available" data-notes="Placeholder details for Lot 27.">
+          <img src="assets/lots/lot27.jpg" alt="Shannon Lake Lot 27" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 27</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="28" data-status="available" data-notes="Placeholder details for Lot 28.">
+          <img src="assets/lots/lot28.jpg" alt="Shannon Lake Lot 28" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 28</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="29" data-status="available" data-notes="Placeholder details for Lot 29.">
+          <img src="assets/lots/lot29.jpg" alt="Shannon Lake Lot 29" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 29</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="30" data-status="available" data-notes="Placeholder details for Lot 30.">
+          <img src="assets/lots/lot30.jpg" alt="Shannon Lake Lot 30" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 30</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <!-- 31–42 -->
+        <figure class="lot-card" data-lot="31" data-status="available" data-notes="Placeholder details for Lot 31.">
+          <img src="assets/lots/lot31.jpg" alt="Shannon Lake Lot 31" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 31</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="32" data-status="available" data-notes="Placeholder details for Lot 32.">
+          <img src="assets/lots/lot32.jpg" alt="Shannon Lake Lot 32" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 32</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="33" data-status="available" data-notes="Placeholder details for Lot 33.">
+          <img src="assets/lots/lot33.jpg" alt="Shannon Lake Lot 33" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 33</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="34" data-status="available" data-notes="Placeholder details for Lot 34.">
+          <img src="assets/lots/lot34.jpg" alt="Shannon Lake Lot 34" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 34</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="35" data-status="available" data-notes="Placeholder details for Lot 35.">
+          <img src="assets/lots/lot35.jpg" alt="Shannon Lake Lot 35" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 35</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="36" data-status="available" data-notes="Placeholder details for Lot 36.">
+          <img src="assets/lots/lot36.jpg" alt="Shannon Lake Lot 36" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 36</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="37" data-status="available" data-notes="Placeholder details for Lot 37.">
+          <img src="assets/lots/lot37.jpg" alt="Shannon Lake Lot 37" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 37</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="38" data-status="available" data-notes="Placeholder details for Lot 38.">
+          <img src="assets/lots/lot38.jpg" alt="Shannon Lake Lot 38" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 38</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="39" data-status="available" data-notes="Placeholder details for Lot 39.">
+          <img src="assets/lots/lot39.jpg" alt="Shannon Lake Lot 39" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 39</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="40" data-status="available" data-notes="Placeholder details for Lot 40.">
+          <img src="assets/lots/lot40.jpg" alt="Shannon Lake Lot 40" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 40</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="41" data-status="available" data-notes="Placeholder details for Lot 41.">
+          <img src="assets/lots/lot41.jpg" alt="Shannon Lake Lot 41" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 41</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+        <figure class="lot-card" data-lot="42" data-status="available" data-notes="Placeholder details for Lot 42.">
+          <img src="assets/lots/lot42.jpg" alt="Shannon Lake Lot 42" loading="lazy" />
+          <figcaption><span class="lot-label">Lot 42</span><span class="status-badge status-available">Available</span></figcaption>
+        </figure>
+
+      </div>
+    </section>
 
     <footer class="footer">
       <p class="disclaimer">
-        Disclaimer: Information is subject to change without notice. Availability may change at any time.
+        Disclaimer: Information is provided for general marketing purposes and is subject to change without notice.
+        Availability may change at any time.
       </p>
     </footer>
   </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="1"></div>
+
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Lot photo viewer">
+      <button class="lightbox-close" type="button" aria-label="Close" data-close="1">×</button>
+
+      <div class="lightbox-media">
+        <img id="lightboxImg" src="" alt="" />
+        <div class="lightbox-info">
+          <div class="lightbox-title" id="lightboxTitle">Lot</div>
+          <div class="lightbox-meta">
+            <span id="lightboxStatus" class="status-badge status-available">Available</span>
+          </div>
+          <div class="lightbox-notes" id="lightboxNotes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY CTA (ONLY CTA ON PAGE) -->
+  <div class="sticky-cta" role="region" aria-label="Request information">
+    <a class="sticky-btn" href="contact.html">Request Information</a>
+    <a class="sticky-btn sticky-ghost" href="mailto:Info@sunsetonshannon.com">Email</a>
+  </div>
+
+  <script>
+    // ===== Sticky CTA (show after scroll on ALL devices) =====
+    const sticky = document.querySelector('.sticky-cta');
+    const showAfter = 260;
+
+    function onScroll() {
+      if (!sticky) return;
+      if (window.scrollY > showAfter) sticky.classList.add('is-visible');
+      else sticky.classList.remove('is-visible');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ===== Filtering =====
+    const filter = document.getElementById('statusFilter');
+    const grid = document.getElementById('lotGrid');
+
+    function applyFilter() {
+      const val = filter.value;
+      const cards = grid.querySelectorAll('.lot-card');
+      cards.forEach(card => {
+        const status = card.getAttribute('data-status');
+        const show = (val === 'all' || val === status);
+        card.style.display = show ? '' : 'none';
+      });
+    }
+    filter.addEventListener('change', applyFilter);
+
+    // ===== Lightbox =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxStatus = document.getElementById('lightboxStatus');
+    const lightboxNotes = document.getElementById('lightboxNotes');
+
+    function openLightbox(card) {
+      const lotNum = card.getAttribute('data-lot');
+      const status = card.getAttribute('data-status') || 'available';
+      const notes = card.getAttribute('data-notes') || '';
+      const img = card.querySelector('img');
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || `Shannon Lake Lot ${lotNum}`;
+      lightboxTitle.textContent = `Lot ${lotNum}`;
+
+      // status badge
+      lightboxStatus.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+      lightboxStatus.className = 'status-badge ' + (status === 'sold' ? 'status-sold' : status === 'hold' ? 'status-hold' : 'status-available');
+
+      lightboxNotes.textContent = notes;
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      // prevent flash of old image on reopen
+      lightboxImg.src = '';
+    }
+
+    // click any lot card
+    grid.addEventListener('click', (e) => {
+      const card = e.target.closest('.lot-card');
+      if (!card) return;
+      openLightbox(card);
+    });
+
+    // close handlers
+    lightbox.addEventListener('click', (e) => {
+      if (e.target && e.target.getAttribute('data-close') === '1') closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+
+    // initial filter
+    applyFilter();
+  </script>
 </body>
 </html>
