@@ -207,3 +207,254 @@ textarea{resize:vertical}
 @media (max-width: 900px){
   body{ padding-bottom: 92px; }
 }
+/* ===== Lots page additions ===== */
+.lots-section{ margin: 18px 0 22px; }
+.section-head h2{ margin: 0 0 6px; font-size: 18px; }
+.section-head p{ margin: 0; }
+
+.map-placeholder{
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(17,26,46,.35);
+  overflow: hidden;
+}
+.map-placeholder-inner{
+  padding: 22px;
+  text-align: center;
+  color: var(--muted);
+}
+.map-placeholder code{
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.lots-toolbar{
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(17,26,46,.35);
+}
+.filter{ min-width: 220px; }
+.filter select{ margin-top: 6px; }
+
+.legend{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.pill{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+.pill-available{ }
+.pill-hold{ opacity: .9; }
+.pill-sold{ opacity: .7; }
+
+.lot-grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (max-width: 1000px){
+  .lot-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 720px){
+  .lot-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.lot-card{
+  margin: 0;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(17,26,46,.35);
+  cursor: pointer;
+}
+.lot-card img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform .25s ease;
+}
+.lot-card:hover img{ transform: scale(1.03); }
+
+/* Overlay label + badge */
+.lot-card figcaption{
+  position: absolute;
+  inset: auto 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(11,18,32,.68);
+  backdrop-filter: blur(10px);
+  opacity: .92;
+  transition: opacity .2s ease, transform .2s ease;
+  transform: translateY(2px);
+}
+.lot-card:hover figcaption{
+  opacity: 1;
+  transform: translateY(0);
+}
+.lot-label{ font-weight: 900; letter-spacing: .2px; }
+
+.status-badge{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+.status-available{ }
+.status-hold{ opacity: .9; }
+.status-sold{ opacity: .7; }
+
+/* ===== Lightbox ===== */
+.no-scroll{ overflow: hidden; }
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 2000;
+}
+.lightbox.is-open{ display: block; }
+
+.lightbox-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+}
+
+.lightbox-panel{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(980px, calc(100vw - 24px));
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(11,18,32,.92);
+  overflow: hidden;
+}
+
+.lightbox-close{
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.lightbox-media{
+  position: relative;
+}
+.lightbox-media img{
+  width: 100%;
+  height: min(70vh, 720px);
+  object-fit: contain;
+  display: block;
+  background: rgba(255,255,255,.03);
+}
+
+.lightbox-info{
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(11,18,32,.72);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-title{
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.lightbox-meta{ margin-bottom: 6px; }
+.lightbox-notes{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== Sticky CTA after scroll (ALL devices) ===== */
+.sticky-cta{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(11,18,32,.78);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.sticky-cta.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.sticky-btn{
+  flex: 1;
+  text-align: center;
+  padding: 12px 12px;
+  border-radius: 14px;
+  font-weight: 900;
+  background: var(--accent);
+  color: #04121f;
+  text-decoration: none;
+  border: 0;
+  white-space: nowrap;
+}
+.sticky-ghost{
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* ensure content isn't hidden behind sticky bar */
+body{ padding-bottom: 92px; }
