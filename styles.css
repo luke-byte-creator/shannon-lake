@@ -173,26 +173,37 @@ textarea{resize:vertical}
   z-index: 999;
 }
 
-.sticky-btn{
-  flex: 1;
-  text-align: center;
-  padding: 12px 14px;
-  border-radius: 14px;
-  font-weight: 800;
-  background: var(--accent);
-  color: #04121f;
-  text-decoration: none;
-  border: 0;
-}
-
-.sticky-ghost{
-  background: transparent;
-  color: var(--text);
+/* Sticky mobile CTA */
+.sticky-cta{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
   border: 1px solid var(--line);
+  background: rgba(11,18,32,.78);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+
+  /* hidden by default */
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
 }
 
+.sticky-cta.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 901px){
+  .sticky-cta{ display: none; }
+}
 @media (max-width: 900px){
-  .sticky-cta{ display: flex; }
-  /* add space so content isn't hidden behind the sticky bar */
   body{ padding-bottom: 92px; }
 }
