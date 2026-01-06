@@ -83,6 +83,20 @@
         <a class="sticky-btn" href="contact.html">Request Information</a>
         <a class="sticky-btn sticky-ghost" href="mailto:Info@sunsetonshannon.com">Email</a>
       </div>
+      
+      <script>
+  const sticky = document.querySelector('.sticky-cta');
+  const showAfter = 220; // px scrolled before showing
+
+  function onScroll() {
+    if (!sticky) return;
+    if (window.scrollY > showAfter) sticky.classList.add('is-visible');
+    else sticky.classList.remove('is-visible');
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
       </div>
     </section>
 
