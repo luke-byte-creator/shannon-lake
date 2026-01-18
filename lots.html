@@ -71,17 +71,10 @@
       </div>
 
       <div class="lots-toolbar" aria-label="Lot filters">
-        <label class="filter">
-          Status
-          <select id="statusFilter">
-            <option value="all" selected>All</option>
-            <option value="available">Available</option>
-            <option value="sold">Sold</option>
-          </select>
-        </label>
-        <div class="legend" aria-label="Status legend">
-          <span class="pill pill-available">Available</span>
-          <span class="pill pill-sold">Sold</span>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="available">Available</button>
+          <button class="filter-btn" data-filter="sold">Sold</button>
+          <button class="filter-btn" data-filter="all">All</button>
         </div>
       </div>
 
@@ -89,7 +82,7 @@
       <div class="lot-grid" id="lotGrid">
         
         <!-- Lot 1 -->
-        <figure class="lot-card" data-lot="1" data-status="available" data-size="0.37 Acres" data-parcel="166171215" data-notes="Parcel 166171215 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="1" data-status="available" data-size="0.37 Acres" data-parcel="166171215" data-notes="Parcel 166171215 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot1.jpg" alt="Shannon Lake Lot 1" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 1</span>
@@ -98,7 +91,7 @@
         </figure>
 
         <!-- Lot 2 -->
-        <figure class="lot-card" data-lot="2" data-status="available" data-size="0.37 Acres" data-parcel="166171114" data-notes="Parcel 166171114 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="2" data-status="available" data-size="0.37 Acres" data-parcel="166171114" data-notes="Parcel 166171114 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot2.jpg" alt="Shannon Lake Lot 2" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 2</span>
@@ -107,7 +100,7 @@
         </figure>
 
         <!-- Lot 3 -->
-        <figure class="lot-card" data-lot="3" data-status="available" data-size="0.37 Acres" data-parcel="166171271" data-notes="Parcel 166171271 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="3" data-status="available" data-size="0.37 Acres" data-parcel="166171271" data-notes="Parcel 166171271 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot3.jpg" alt="Shannon Lake Lot 3" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 3</span>
@@ -116,7 +109,7 @@
         </figure>
 
         <!-- Lot 4 -->
-        <figure class="lot-card" data-lot="4" data-status="available" data-size="0.37 Acres" data-parcel="166171260" data-notes="Parcel 166171260 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="4" data-status="available" data-size="0.37 Acres" data-parcel="166171260" data-notes="Parcel 166171260 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot4.jpg" alt="Shannon Lake Lot 4" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 4</span>
@@ -125,7 +118,7 @@
         </figure>
 
         <!-- Lot 5 - SOLD -->
-        <figure class="lot-card" data-lot="5" data-status="sold" data-size="0.37 Acres" data-parcel="166171103" data-notes="Parcel 166171103 • 0.37 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="5" data-status="sold" data-size="0.37 Acres" data-parcel="166171103" data-notes="Parcel 166171103 • 0.37 Acres. This lot has been sold.">
           <img src="assets/lots/lot5.jpg" alt="Shannon Lake Lot 5" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 5</span>
@@ -134,7 +127,7 @@
         </figure>
 
         <!-- Lot 6 - SOLD -->
-        <figure class="lot-card" data-lot="6" data-status="sold" data-size="0.37 Acres" data-parcel="166171204" data-notes="Parcel 166171204 • 0.37 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="6" data-status="sold" data-size="0.37 Acres" data-parcel="166171204" data-notes="Parcel 166171204 • 0.37 Acres. This lot has been sold.">
           <img src="assets/lots/lot6.jpg" alt="Shannon Lake Lot 6" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 6</span>
@@ -143,7 +136,7 @@
         </figure>
 
         <!-- Lot 7 -->
-        <figure class="lot-card" data-lot="7" data-status="available" data-size="0.37 Acres" data-parcel="166170955" data-notes="Parcel 166170955 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="7" data-status="available" data-size="0.37 Acres" data-parcel="166170955" data-notes="Parcel 166170955 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot7.jpg" alt="Shannon Lake Lot 7" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 7</span>
@@ -152,7 +145,7 @@
         </figure>
 
         <!-- Lot 8 -->
-        <figure class="lot-card" data-lot="8" data-status="available" data-size="0.37 Acres" data-parcel="166171192" data-notes="Parcel 166171192 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="8" data-status="available" data-size="0.37 Acres" data-parcel="166171192" data-notes="Parcel 166171192 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot8.jpg" alt="Shannon Lake Lot 8" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 8</span>
@@ -161,7 +154,7 @@
         </figure>
 
         <!-- Lot 9 - SOLD -->
-        <figure class="lot-card" data-lot="9" data-status="sold" data-size="0.36 Acres" data-parcel="166171451" data-notes="Parcel 166171451 • 0.36 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="9" data-status="sold" data-size="0.36 Acres" data-parcel="166171451" data-notes="Parcel 166171451 • 0.36 Acres. This lot has been sold.">
           <img src="assets/lots/lot9.jpg" alt="Shannon Lake Lot 9" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 9</span>
@@ -170,7 +163,7 @@
         </figure>
 
         <!-- Lot 10 - SOLD -->
-        <figure class="lot-card" data-lot="10" data-status="sold" data-size="0.36 Acres" data-parcel="166171440" data-notes="Parcel 166171440 • 0.36 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="10" data-status="sold" data-size="0.36 Acres" data-parcel="166171440" data-notes="Parcel 166171440 • 0.36 Acres. This lot has been sold.">
           <img src="assets/lots/lot10.jpg" alt="Shannon Lake Lot 10" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 10</span>
@@ -179,7 +172,7 @@
         </figure>
 
         <!-- Lot 11 - SOLD -->
-        <figure class="lot-card" data-lot="11" data-status="sold" data-size="0.47 Acres" data-parcel="166171439" data-notes="Parcel 166171439 • 0.47 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="11" data-status="sold" data-size="0.47 Acres" data-parcel="166171439" data-notes="Parcel 166171439 • 0.47 Acres. This lot has been sold.">
           <img src="assets/lots/lot11.jpg" alt="Shannon Lake Lot 11" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 11</span>
@@ -188,7 +181,7 @@
         </figure>
 
         <!-- Lot 12 - SOLD -->
-        <figure class="lot-card" data-lot="12" data-status="sold" data-size="0.47 Acres" data-parcel="166170944" data-notes="Parcel 166170944 • 0.47 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="12" data-status="sold" data-size="0.47 Acres" data-parcel="166170944" data-notes="Parcel 166170944 • 0.47 Acres. This lot has been sold.">
           <img src="assets/lots/lot12.jpg" alt="Shannon Lake Lot 12" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 12</span>
@@ -197,7 +190,7 @@
         </figure>
 
         <!-- Lot 13 -->
-        <figure class="lot-card" data-lot="13" data-status="available" data-size="0.57 Acres" data-parcel="166171349" data-notes="Parcel 166171349 • 0.57 Acres. Access to power, water, and septic tank services available in the area. A spacious lot with room to build your dream lakeside home.">
+        <figure class="lot-card" data-lot="13" data-status="available" data-size="0.57 Acres" data-parcel="166171349" data-notes="Parcel 166171349 • 0.57 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot13.jpg" alt="Shannon Lake Lot 13" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 13</span>
@@ -206,7 +199,7 @@
         </figure>
 
         <!-- Lot 14 -->
-        <figure class="lot-card" data-lot="14" data-status="available" data-size="" data-parcel="166171181" data-notes="Parcel 166171181. Access to power, water, and septic tank services available in the area. Contact us for size details.">
+        <figure class="lot-card" data-lot="14" data-status="available" data-size="" data-parcel="166171181" data-notes="Parcel 166171181. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available. Contact us for size details.">
           <img src="assets/lots/lot14.jpg" alt="Shannon Lake Lot 14" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 14</span>
@@ -215,7 +208,7 @@
         </figure>
 
         <!-- Lot 15 - SOLD -->
-        <figure class="lot-card" data-lot="15" data-status="sold" data-size="0.67 Acres" data-parcel="166171091" data-notes="Parcel 166171091 • 0.67 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="15" data-status="sold" data-size="0.67 Acres" data-parcel="166171091" data-notes="Parcel 166171091 • 0.67 Acres. This lot has been sold.">
           <img src="assets/lots/lot15.jpg" alt="Shannon Lake Lot 15" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 15</span>
@@ -224,7 +217,7 @@
         </figure>
 
         <!-- Lot 16 - SOLD -->
-        <figure class="lot-card" data-lot="16" data-status="sold" data-size="0.68 Acres" data-parcel="166171024" data-notes="Parcel 166171024 • 0.68 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="16" data-status="sold" data-size="0.68 Acres" data-parcel="166171024" data-notes="Parcel 166171024 • 0.68 Acres. This lot has been sold.">
           <img src="assets/lots/lot16.jpg" alt="Shannon Lake Lot 16" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 16</span>
@@ -233,7 +226,7 @@
         </figure>
 
         <!-- Lot 17 - SOLD -->
-        <figure class="lot-card" data-lot="17" data-status="sold" data-size="0.83 Acres" data-parcel="166170922" data-notes="Parcel 166170922 • 0.83 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="17" data-status="sold" data-size="0.83 Acres" data-parcel="166170922" data-notes="Parcel 166170922 • 0.83 Acres. This lot has been sold.">
           <img src="assets/lots/lot17.jpg" alt="Shannon Lake Lot 17" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 17</span>
@@ -242,7 +235,7 @@
         </figure>
 
         <!-- Lot 18 - SOLD -->
-        <figure class="lot-card" data-lot="18" data-status="sold" data-size="0.9 Acres" data-parcel="166171079" data-notes="Parcel 166171079 • 0.9 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="18" data-status="sold" data-size="0.9 Acres" data-parcel="166171079" data-notes="Parcel 166171079 • 0.9 Acres. This lot has been sold.">
           <img src="assets/lots/lot18.jpg" alt="Shannon Lake Lot 18" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 18</span>
@@ -251,7 +244,7 @@
         </figure>
 
         <!-- Lot 19 - SOLD -->
-        <figure class="lot-card" data-lot="19" data-status="sold" data-size="0.84 Acres" data-parcel="166170911" data-notes="Parcel 166170911 • 0.84 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="19" data-status="sold" data-size="0.84 Acres" data-parcel="166170911" data-notes="Parcel 166170911 • 0.84 Acres. This lot has been sold.">
           <img src="assets/lots/lot19.jpg" alt="Shannon Lake Lot 19" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 19</span>
@@ -260,7 +253,7 @@
         </figure>
 
         <!-- Lot 20 - SOLD -->
-        <figure class="lot-card" data-lot="20" data-status="sold" data-size="0.66 Acres" data-parcel="166171169" data-notes="Parcel 166171169 • 0.66 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="20" data-status="sold" data-size="0.66 Acres" data-parcel="166171169" data-notes="Parcel 166171169 • 0.66 Acres. This lot has been sold.">
           <img src="assets/lots/lot20.jpg" alt="Shannon Lake Lot 20" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 20</span>
@@ -269,7 +262,7 @@
         </figure>
 
         <!-- Lot 21 -->
-        <figure class="lot-card" data-lot="21" data-status="available" data-size="0.61 Acres" data-parcel="166171394" data-notes="Parcel 166171394 • 0.61 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="21" data-status="available" data-size="0.61 Acres" data-parcel="166171394" data-notes="Parcel 166171394 • 0.61 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot21.jpg" alt="Shannon Lake Lot 21" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 21</span>
@@ -278,7 +271,7 @@
         </figure>
 
         <!-- Lot 22 -->
-        <figure class="lot-card" data-lot="22" data-status="available" data-size="" data-parcel="166171158" data-notes="Parcel 166171158. Access to power, water, and septic tank services available in the area. Contact us for size details.">
+        <figure class="lot-card" data-lot="22" data-status="available" data-size="" data-parcel="166171158" data-notes="Parcel 166171158. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available. Contact us for size details.">
           <img src="assets/lots/lot22.jpg" alt="Shannon Lake Lot 22" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 22</span>
@@ -287,7 +280,7 @@
         </figure>
 
         <!-- Lot 23 -->
-        <figure class="lot-card" data-lot="23" data-status="available" data-size="0.59 Acres" data-parcel="166170900" data-notes="Parcel 166170900 • 0.59 Acres. Access to power, water, and septic tank services available in the area. A well-sized lot perfect for your Saskatchewan getaway.">
+        <figure class="lot-card" data-lot="23" data-status="available" data-size="0.59 Acres" data-parcel="166170900" data-notes="Parcel 166170900 • 0.59 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot23.jpg" alt="Shannon Lake Lot 23" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 23</span>
@@ -296,7 +289,7 @@
         </figure>
 
         <!-- Lot 24 -->
-        <figure class="lot-card" data-lot="24" data-status="available" data-size="0.62 Acres" data-parcel="166171013" data-notes="Parcel 166171013 • 0.62 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="24" data-status="available" data-size="0.62 Acres" data-parcel="166171013" data-notes="Parcel 166171013 • 0.62 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot24.jpg" alt="Shannon Lake Lot 24" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 24</span>
@@ -305,7 +298,7 @@
         </figure>
 
         <!-- Lot 25 -->
-        <figure class="lot-card" data-lot="25" data-status="available" data-size="0.63 Acres" data-parcel="166171383" data-notes="Parcel 166171383 • 0.63 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="25" data-status="available" data-size="0.63 Acres" data-parcel="166171383" data-notes="Parcel 166171383 • 0.63 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot25.jpg" alt="Shannon Lake Lot 25" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 25</span>
@@ -314,7 +307,7 @@
         </figure>
 
         <!-- Lot 26 -->
-        <figure class="lot-card" data-lot="26" data-status="available" data-size="0.66 Acres" data-parcel="166171372" data-notes="Parcel 166171372 • 0.66 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="26" data-status="available" data-size="0.66 Acres" data-parcel="166171372" data-notes="Parcel 166171372 • 0.66 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot26.jpg" alt="Shannon Lake Lot 26" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 26</span>
@@ -323,7 +316,7 @@
         </figure>
 
         <!-- Lot 27 - SOLD -->
-        <figure class="lot-card" data-lot="27" data-status="sold" data-size="0.7 Acres" data-parcel="166171147" data-notes="Parcel 166171147 • 0.7 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="27" data-status="sold" data-size="0.7 Acres" data-parcel="166171147" data-notes="Parcel 166171147 • 0.7 Acres. This lot has been sold.">
           <img src="assets/lots/lot27.jpg" alt="Shannon Lake Lot 27" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 27</span>
@@ -332,7 +325,7 @@
         </figure>
 
         <!-- Lot 28 -->
-        <figure class="lot-card" data-lot="28" data-status="available" data-size="0.7 Acres" data-parcel="166171338" data-notes="Parcel 166171338 • 0.7 Acres. Access to power, water, and septic tank services available in the area. One of the larger lots available — ideal for a spacious lakeside property.">
+        <figure class="lot-card" data-lot="28" data-status="available" data-size="0.7 Acres" data-parcel="166171338" data-notes="Parcel 166171338 • 0.7 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot28.jpg" alt="Shannon Lake Lot 28" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 28</span>
@@ -341,7 +334,7 @@
         </figure>
 
         <!-- Lot 29 -->
-        <figure class="lot-card" data-lot="29" data-status="available" data-size="0.66 Acres" data-parcel="166171136" data-notes="Parcel 166171136 • 0.66 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="29" data-status="available" data-size="0.66 Acres" data-parcel="166171136" data-notes="Parcel 166171136 • 0.66 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot29.jpg" alt="Shannon Lake Lot 29" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 29</span>
@@ -350,7 +343,7 @@
         </figure>
 
         <!-- Lot 30 -->
-        <figure class="lot-card" data-lot="30" data-status="available" data-size="0.66 Acres" data-parcel="166170898" data-notes="Parcel 166170898 • 0.66 Acres. Access to power, water, and septic tank services available in the area. A generous lot with plenty of space for your lakeside retreat.">
+        <figure class="lot-card" data-lot="30" data-status="available" data-size="0.66 Acres" data-parcel="166170898" data-notes="Parcel 166170898 • 0.66 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot30.jpg" alt="Shannon Lake Lot 30" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 30</span>
@@ -359,7 +352,7 @@
         </figure>
 
         <!-- Lot 31 -->
-        <figure class="lot-card" data-lot="31" data-status="available" data-size="0.57 Acres" data-parcel="166171057" data-notes="Parcel 166171057 • 0.57 Acres. Access to power, water, and septic tank services available in the area. A spacious lot with room to build your dream lakeside home.">
+        <figure class="lot-card" data-lot="31" data-status="available" data-size="0.57 Acres" data-parcel="166171057" data-notes="Parcel 166171057 • 0.57 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot31.jpg" alt="Shannon Lake Lot 31" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 31</span>
@@ -368,7 +361,7 @@
         </figure>
 
         <!-- Lot 32 -->
-        <figure class="lot-card" data-lot="32" data-status="available" data-size="0.5 Acres" data-parcel="166171002" data-notes="Parcel 166171002 • 0.5 Acres. Access to power, water, and septic tank services available in the area. A well-sized lot perfect for your Saskatchewan getaway.">
+        <figure class="lot-card" data-lot="32" data-status="available" data-size="0.5 Acres" data-parcel="166171002" data-notes="Parcel 166171002 • 0.5 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot32.jpg" alt="Shannon Lake Lot 32" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 32</span>
@@ -377,7 +370,7 @@
         </figure>
 
         <!-- Lot 33 -->
-        <figure class="lot-card" data-lot="33" data-status="available" data-size="0.47 Acres" data-parcel="166170999" data-notes="Parcel 166170999 • 0.47 Acres. Access to power, water, and septic tank services available in the area. A well-sized lot perfect for your Saskatchewan getaway.">
+        <figure class="lot-card" data-lot="33" data-status="available" data-size="0.47 Acres" data-parcel="166170999" data-notes="Parcel 166170999 • 0.47 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot33.jpg" alt="Shannon Lake Lot 33" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 33</span>
@@ -386,7 +379,7 @@
         </figure>
 
         <!-- Lot 34 -->
-        <figure class="lot-card" data-lot="34" data-status="available" data-size="0.42 Acres" data-parcel="166171327" data-notes="Parcel 166171327 • 0.42 Acres. Access to power, water, and septic tank services available in the area. A cozy lot ideal for a weekend cabin or cottage.">
+        <figure class="lot-card" data-lot="34" data-status="available" data-size="0.42 Acres" data-parcel="166171327" data-notes="Parcel 166171327 • 0.42 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot34.jpg" alt="Shannon Lake Lot 34" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 34</span>
@@ -395,7 +388,7 @@
         </figure>
 
         <!-- Lot 35 - SOLD -->
-        <figure class="lot-card" data-lot="35" data-status="sold" data-size="0.37 Acres" data-parcel="166171406" data-notes="Parcel 166171406 • 0.37 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="35" data-status="sold" data-size="0.37 Acres" data-parcel="166171406" data-notes="Parcel 166171406 • 0.37 Acres. This lot has been sold.">
           <img src="assets/lots/lot35.jpg" alt="Shannon Lake Lot 35" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 35</span>
@@ -404,7 +397,7 @@
         </figure>
 
         <!-- Lot 36 - SOLD -->
-        <figure class="lot-card" data-lot="36" data-status="sold" data-size="0.37 Acres" data-parcel="166171259" data-notes="Parcel 166171259 • 0.37 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="36" data-status="sold" data-size="0.37 Acres" data-parcel="166171259" data-notes="Parcel 166171259 • 0.37 Acres. This lot has been sold.">
           <img src="assets/lots/lot36.jpg" alt="Shannon Lake Lot 36" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 36</span>
@@ -413,7 +406,7 @@
         </figure>
 
         <!-- Lot 37 - SOLD -->
-        <figure class="lot-card" data-lot="37" data-status="sold" data-size="0.37 Acres" data-parcel="166171248" data-notes="Parcel 166171248 • 0.37 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="37" data-status="sold" data-size="0.37 Acres" data-parcel="166171248" data-notes="Parcel 166171248 • 0.37 Acres. This lot has been sold.">
           <img src="assets/lots/lot37.jpg" alt="Shannon Lake Lot 37" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 37</span>
@@ -422,7 +415,7 @@
         </figure>
 
         <!-- Lot 38 -->
-        <figure class="lot-card" data-lot="38" data-status="available" data-size="0.37 Acres" data-parcel="166171361" data-notes="Parcel 166171361 • 0.37 Acres. Access to power, water, and septic tank services available in the area. A perfect size for your lakeside retreat.">
+        <figure class="lot-card" data-lot="38" data-status="available" data-size="0.37 Acres" data-parcel="166171361" data-notes="Parcel 166171361 • 0.37 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot38.jpg" alt="Shannon Lake Lot 38" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 38</span>
@@ -431,7 +424,7 @@
         </figure>
 
         <!-- Lot 39 -->
-        <figure class="lot-card" data-lot="39" data-status="available" data-size="0.46 Acres" data-parcel="166171316" data-notes="Parcel 166171316 • 0.46 Acres. Access to power, water, and septic tank services available in the area. A well-sized lot perfect for your Saskatchewan getaway.">
+        <figure class="lot-card" data-lot="39" data-status="available" data-size="0.46 Acres" data-parcel="166171316" data-notes="Parcel 166171316 • 0.46 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot39.jpg" alt="Shannon Lake Lot 39" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 39</span>
@@ -440,7 +433,7 @@
         </figure>
 
         <!-- Lot 40 -->
-        <figure class="lot-card" data-lot="40" data-status="available" data-size="0.55 Acres" data-parcel="166171046" data-notes="Parcel 166171046 • 0.55 Acres. Access to power, water, and septic tank services available in the area. A spacious lot with room to build your dream lakeside home.">
+        <figure class="lot-card" data-lot="40" data-status="available" data-size="0.55 Acres" data-parcel="166171046" data-notes="Parcel 166171046 • 0.55 Acres. Power is provided to your lot. Water and septic services are available in the area. Roads are cleared during the winter. Starlink internet is available.">
           <img src="assets/lots/lot40.jpg" alt="Shannon Lake Lot 40" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 40</span>
@@ -448,17 +441,17 @@
           </figcaption>
         </figure>
 
-        <!-- Lot 41 -->
-        <figure class="lot-card" data-lot="41" data-status="available" data-size="0.58 Acres" data-parcel="166171305" data-notes="Parcel 166171305 • 0.58 Acres. Access to power, water, and septic tank services available in the area. A spacious lot with room to build your dream lakeside home.">
+        <!-- Lot 41 - SOLD -->
+        <figure class="lot-card" data-lot="41" data-status="sold" data-size="0.58 Acres" data-parcel="166171305" data-notes="Parcel 166171305 • 0.58 Acres. This lot has been sold.">
           <img src="assets/lots/lot41.jpg" alt="Shannon Lake Lot 41" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 41</span>
-            <span class="status-badge status-available">Available</span>
+            <span class="status-badge status-sold">Sold</span>
           </figcaption>
         </figure>
 
         <!-- Lot 42 - SOLD -->
-        <figure class="lot-card" data-lot="42" data-status="sold" data-size="0.64 Acres" data-parcel="166171125" data-notes="Parcel 166171125 • 0.64 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="42" data-status="sold" data-size="0.64 Acres" data-parcel="166171125" data-notes="Parcel 166171125 • 0.64 Acres. This lot has been sold.">
           <img src="assets/lots/lot42.jpg" alt="Shannon Lake Lot 42" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 42</span>
@@ -467,7 +460,7 @@
         </figure>
 
         <!-- Lot 43 - SOLD -->
-        <figure class="lot-card" data-lot="43" data-status="sold" data-size="0.85 Acres" data-parcel="166171293" data-notes="Parcel 166171293 • 0.85 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="43" data-status="sold" data-size="0.85 Acres" data-parcel="166171293" data-notes="Parcel 166171293 • 0.85 Acres. This lot has been sold.">
           <img src="assets/lots/lot43.jpg" alt="Shannon Lake Lot 43" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 43</span>
@@ -476,7 +469,7 @@
         </figure>
 
         <!-- Lot 44 - SOLD -->
-        <figure class="lot-card" data-lot="44" data-status="sold" data-size="0.66 Acres" data-parcel="166170977" data-notes="Parcel 166170977 • 0.66 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="44" data-status="sold" data-size="0.66 Acres" data-parcel="166170977" data-notes="Parcel 166170977 • 0.66 Acres. This lot has been sold.">
           <img src="assets/lots/lot44.jpg" alt="Shannon Lake Lot 44" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 44</span>
@@ -485,7 +478,7 @@
         </figure>
 
         <!-- Lot 45 - SOLD -->
-        <figure class="lot-card" data-lot="45" data-status="sold" data-size="0.6 Acres" data-parcel="166170876" data-notes="Parcel 166170876 • 0.6 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="45" data-status="sold" data-size="0.6 Acres" data-parcel="166170876" data-notes="Parcel 166170876 • 0.6 Acres. This lot has been sold.">
           <img src="assets/lots/lot45.jpg" alt="Shannon Lake Lot 45" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 45</span>
@@ -494,7 +487,7 @@
         </figure>
 
         <!-- Lot 46 - SOLD -->
-        <figure class="lot-card" data-lot="46" data-status="sold" data-size="0.46 Acres" data-parcel="166170887" data-notes="Parcel 166170887 • 0.46 Acres. Access to power, water, and septic tank services available in the area. This lot has been sold.">
+        <figure class="lot-card" data-lot="46" data-status="sold" data-size="0.46 Acres" data-parcel="166170887" data-notes="Parcel 166170887 • 0.46 Acres. This lot has been sold.">
           <img src="assets/lots/lot46.jpg" alt="Shannon Lake Lot 46" loading="lazy" />
           <figcaption>
             <span class="lot-label">Lot 46</span>
@@ -572,20 +565,33 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // ===== Filtering =====
-    const filter = document.getElementById('statusFilter');
+    // ===== Button Filtering =====
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const grid = document.getElementById('lotGrid');
     
-    function applyFilter() {
-      const val = filter.value;
+    function applyFilter(filterValue) {
       const cards = grid.querySelectorAll('.lot-card');
       cards.forEach(card => {
         const status = card.getAttribute('data-status');
-        const show = (val === 'all' || val === status);
+        const show = (filterValue === 'all' || filterValue === status);
         card.style.display = show ? '' : 'none';
       });
+      
+      // Update active button
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-filter') === filterValue) {
+          btn.classList.add('active');
+        }
+      });
     }
-    filter.addEventListener('change', applyFilter);
+    
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filterValue = btn.getAttribute('data-filter');
+        applyFilter(filterValue);
+      });
+    });
 
     // ===== Lightbox =====
     const lightbox = document.getElementById('lightbox');
@@ -643,8 +649,8 @@
       if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
     });
 
-    // Initial filter
-    applyFilter();
+    // Default to showing Available lots only
+    applyFilter('available');
   </script>
 </body>
 </html>
