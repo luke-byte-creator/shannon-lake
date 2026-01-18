@@ -5,89 +5,227 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shannon Lake Saskatchewan | A private lakeside escape 1 hour from Saskatoon</title>
   <meta name="description" content="Shannon Lake, Saskatchewan — a quiet, private lakeside escape about 1 hour east of Saskatoon via Highway 41, near Wakaw Lake. Lakeside lots and seasonal RV options. Request information today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html">Shannon Lake</a>
-      <nav class="nav">
-        <a class="active" href="index.html">Home</a>
-        <a href="lots.html">Lots for Sale</a>
-        <a href="rv-park.html">RV Park</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
+  <!-- Full-viewport Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/drone1.jpg" alt="Shannon Lake Saskatchewan drone view near Wakaw Lake" />
+      <div class="hero-overlay"></div>
     </div>
-  </header>
+    
+    <!-- Navigation overlaid on hero -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">Shannon Lake</a>
+        <nav class="nav">
+          <a class="active" href="index.html">Home</a>
+          <a href="lots.html">Lots for Sale</a>
+          <a href="rv-park.html">RV Park</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>A private lakeside escape, 1 hour from Saskatoon</h1>
-        <p class="subhead">
-          Shannon Lake, Saskatchewan — quiet, private, and easy to reach via Highway 41, near Wakaw Lake.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="contact.html">Request Information</a>
-          <a class="btn btn-ghost" href="mailto:Info@sunsetonshannon.com">Email Us</a>
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1>
+        Shannon Lake is a <em>Quiet, Private</em><br>
+        Lakeside Escape<br>
+        <span class="hero-subtitle">Near Saskatoon</span>
+      </h1>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="contact.html">Request Information</a>
+        <a class="btn btn-outline" href="lots.html">View Lots</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Trust indicators -->
+    <section class="trust-section">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-number">5+</span>
+            <span class="trust-label">Years in Development</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">&lt;10</span>
+            <span class="trust-label">Lakeside Lots Remaining</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">1hr</span>
+            <span class="trust-label">From Saskatoon</span>
+          </div>
         </div>
-
-        <ul class="trust">
-          <li>Privately developed by a local Saskatchewan team</li>
-          <li>5+ years in development</li>
-          <li><strong>Less than 10 lakeside lots remaining</strong></li>
-        </ul>
-      </div>
-
-      <div class="hero-media">
-        <!-- We’ll swap this to your drone photo once uploaded -->
-        <img class="hero-img" src="assets/drone1.jpg" alt="Shannon Lake Saskatchewan drone view near Wakaw Lake" />
       </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Lake features</h2>
-        <ul>
-          <li>Quiet, uncrowded setting</li>
-          <li>Simple, affordable lake ownership</li>
-          <li>Easy weekend escape from the city</li>
-          <li>Near Wakaw Lake • Highway 41 access</li>
-        </ul>
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Why <em>Shannon Lake</em></h2>
+          <p class="section-lead">If you're looking for a peaceful place to unplug — without driving all day — Shannon Lake is built for simple weekends and long summer nights.</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 12h18M3 12c0 4.97 4.03 9 9 9s9-4.03 9-9M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9"/>
+                <path d="M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9"/>
+              </svg>
+            </div>
+            <h3>Quiet Setting</h3>
+            <p>An uncrowded, peaceful environment where you can truly disconnect from the city.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Simple Ownership</h3>
+            <p>Affordable lake ownership without the complexity. Straightforward and accessible.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3>Easy Access</h3>
+            <p>Just 1 hour from Saskatoon via Highway 41, near Wakaw Lake. Weekend-ready.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3>Local Development</h3>
+            <p>Privately developed by a local Saskatchewan team who understand the land.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h2>Why Shannon Lake</h2>
-        <p>
-          If you’re looking for a peaceful place to unplug — without driving all day — Shannon Lake is built for simple
-          weekends and long summer nights.
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Explore the <em>Property</em></h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item-large">
+            <img src="assets/drone2.jpg" alt="Shannon Lake lots overview" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/drone3.jpg" alt="Shannon Lake shoreline" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/drone4.jpg" alt="Shannon Lake Saskatchewan aerial photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+      <div class="wrap">
+        <div class="location-content">
+          <div class="location-text">
+            <h2>Find <em>Shannon Lake</em></h2>
+            <p>Located about 1 hour east of Saskatoon via Highway 41, near Wakaw Lake. Easy to reach for a weekend getaway or extended stay.</p>
+            <a href="contact.html" class="btn btn-primary">Get Directions</a>
+          </div>
+          <div class="location-map">
+            <div class="map-placeholder">
+              <p>Map coming soon</p>
+              <span class="map-coords">Near Wakaw Lake, SK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta-content">
+          <h2>Ready to find your <em>lakeside escape</em>?</h2>
+          <p>Less than 10 lakeside lots remaining. Request information today.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-large" href="contact.html">Request Information</a>
+            <a class="btn btn-outline btn-large" href="mailto:Info@sunsetonshannon.com">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="brand">Shannon Lake</span>
+            <p class="footer-tagline">A private lakeside escape near Saskatoon</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="lots.html">Lots for Sale</a>
+            <a href="rv-park.html">RV Park</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+        <p class="disclaimer">
+          Disclaimer: Information is provided for general marketing purposes and is subject to change without notice. Availability may change at any time.
         </p>
       </div>
-
-      <div class="card">
-        <h2>Photo gallery</h2>
-      <div class="gallery">
-        <img src="assets/drone2.jpg" alt="Shannon Lake lots overview" />
-        <img src="assets/drone3.jpg" alt="Shannon Lake shoreline" />
-        <img src="assets/drone4.jpg" alt="Shannon Lake Saskatchewan aerial photo" />
-</div>
-
-      </div>
-
-      <div class="card">
-        <h2>Location</h2>
-        <p class="muted">We’ll embed a map here once we confirm the best pin / coordinates.</p>
-      
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p class="disclaimer">
-        Disclaimer: Information is provided for general marketing purposes and is subject to change without notice.
-        Availability may change at any time.
-      </p>
     </footer>
   </main>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a class="sticky-btn" href="contact.html">Request Info</a>
+    <a class="sticky-btn sticky-ghost" href="lots.html">View Lots</a>
+  </div>
+
+  <script>
+    // Show sticky CTA after scrolling past hero
+    const stickyCta = document.getElementById('stickyCta');
+    const hero = document.querySelector('.hero');
+    
+    function checkScroll() {
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      if (window.scrollY > heroBottom - 100) {
+        stickyCta.classList.add('is-visible');
+      } else {
+        stickyCta.classList.remove('is-visible');
+      }
+    }
+    
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+  </script>
 </body>
 </html>
