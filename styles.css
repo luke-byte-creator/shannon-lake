@@ -818,6 +818,60 @@ img {
   border: 1px solid var(--line);
 }
 
+/* ===== Interactive Lot Map ===== */
+.lot-map-container {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(17, 26, 46, 0.35);
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.lot-map {
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  display: block;
+}
+
+.lot-polygon {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  stroke-width: 2;
+}
+
+.lot-polygon.lot-available {
+  fill: #3a7a4a;
+  stroke: #5a9a6a;
+}
+
+.lot-polygon.lot-available:hover {
+  fill: #4a9a5a;
+  stroke: #7dd3fc;
+  stroke-width: 3;
+}
+
+.lot-polygon.lot-sold {
+  fill: #4a4a4a;
+  stroke: #6a6a6a;
+}
+
+.lot-polygon.lot-sold:hover {
+  fill: #5a5a5a;
+  stroke: #8a8a8a;
+  stroke-width: 3;
+}
+
+.lot-labels text {
+  fill: #ffffff;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-anchor: middle;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
 .lots-toolbar {
   margin-top: 12px;
   display: flex;
