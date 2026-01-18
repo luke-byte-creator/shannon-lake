@@ -168,7 +168,7 @@ img {
   font-size: clamp(36px, 6vw, 72px);
   font-weight: 500;
   line-height: 1.15;
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   max-width: 900px;
 }
 
@@ -177,15 +177,14 @@ img {
   font-weight: 500;
 }
 
-.hero-subtitle {
-  display: block;
-  font-size: 0.7em;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+/* New hero location subtitle - cleaner styling */
+.hero-location {
   font-family: var(--font-body);
+  font-size: 18px;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 40px;
+  letter-spacing: 0.02em;
 }
 
 /* ===== Buttons ===== */
@@ -395,9 +394,12 @@ img {
 }
 
 .gallery-item {
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
+  display: block;
+  text-decoration: none;
 }
 
 .gallery-item img {
@@ -413,6 +415,44 @@ img {
 
 .gallery-item-large {
   grid-row: span 2;
+}
+
+/* Gallery Labels */
+.gallery-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-label {
+  background: rgba(11, 18, 32, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-label-text {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.gallery-label svg {
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-label svg {
+  transform: translateX(4px);
 }
 
 /* ===== Location Section ===== */
@@ -450,29 +490,13 @@ img {
   overflow: hidden;
   border: 1px solid var(--line);
   background: rgba(17, 26, 46, 0.3);
+  height: 400px;
 }
 
-.map-placeholder {
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--text-muted);
-}
-
-.map-placeholder p {
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-
-.map-coords {
-  font-size: 13px;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  border: 1px solid var(--line);
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* ===== CTA Section ===== */
@@ -655,12 +679,16 @@ img {
   }
   
   .gallery-item {
-    height: 250px;
+    height: 280px;
   }
   
   .location-content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  
+  .location-map {
+    height: 300px;
   }
   
   .footer-content {
