@@ -80,36 +80,32 @@
             </linearGradient>
           </defs>
           
-          <!-- Lake - wraps around the peninsula -->
+          <!-- Lake - wraps around the peninsula, matching lot positions -->
           <path d="M0,0 L185,0 
-                   L185,680
-                   L190,700
-                   L200,720
-                   L215,740
-                   L235,760
-                   L260,780
-                   L290,800
-                   L325,820
-                   L365,835
-                   L410,845
-                   L460,850
+                   L185,693
+                   L190,693
+                   L200,713
+                   L215,733
+                   L240,755
+                   L275,780
+                   L325,810
+                   L380,835
+                   L450,850
                    L550,850
                    L550,950 L0,950 Z" 
                 fill="url(#waterGradient)"/>
           
           <!-- Land peninsula -->
           <path d="M185,0 L550,0 L550,850
-                   L460,850
-                   L410,845
-                   L365,835
-                   L325,820
-                   L290,800
-                   L260,780
-                   L235,760
-                   L215,740
-                   L200,720
-                   L190,700
-                   L185,680
+                   L450,850
+                   L380,835
+                   L325,810
+                   L275,780
+                   L240,755
+                   L215,733
+                   L200,713
+                   L190,693
+                   L185,693
                    L185,0 Z" 
                 fill="url(#landGradient)"/>
           
@@ -321,41 +317,42 @@
               <text x="255" y="668" class="lot-label">39</text>
             </g>
             
-            <!-- Lots 40-46: Fan around the curve as pie slices, touching each other, lakefront at water -->
+            <!-- Lots 40-46: Fan around the curve, lakefront edges ON the shoreline -->
+            <!-- Shoreline points: 680:185, 700:190, 720:200, 740:215, 760:235, 780:260, 800:290, 820:325, 835:365, 845:410 -->
             <g class="lot-group" data-lot="40">
-              <polygon class="lot-rect" points="185,673 225,673 230,695 190,695"/>
-              <line x1="227" y1="684" x2="255" y2="684" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="260" y="688" class="lot-label">40</text>
+              <polygon class="lot-rect" points="185,673 225,673 230,693 190,693"/>
+              <line x1="227" y1="683" x2="255" y2="683" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="260" y="687" class="lot-label">40</text>
             </g>
             <g class="lot-group" data-lot="41">
-              <polygon class="lot-rect" points="190,695 230,695 245,717 205,715"/>
-              <line x1="237" y1="706" x2="268" y2="706" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="273" y="710" class="lot-label">41</text>
+              <polygon class="lot-rect" points="190,693 230,693 240,713 200,713"/>
+              <line x1="235" y1="703" x2="265" y2="703" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="270" y="707" class="lot-label">41</text>
             </g>
             <g class="lot-group" data-lot="42">
-              <polygon class="lot-rect" points="205,715 245,717 270,737 230,733"/>
-              <line x1="257" y1="727" x2="290" y2="727" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="295" y="731" class="lot-label">42</text>
+              <polygon class="lot-rect" points="200,713 240,713 255,733 215,733"/>
+              <line x1="247" y1="723" x2="280" y2="723" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="285" y="727" class="lot-label">42</text>
             </g>
             <g class="lot-group" data-lot="43">
-              <polygon class="lot-rect" points="230,733 270,737 305,757 265,752"/>
-              <line x1="287" y1="747" x2="320" y2="750" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="325" y="754" class="lot-label">43</text>
+              <polygon class="lot-rect" points="215,733 255,733 280,755 240,755"/>
+              <line x1="267" y1="744" x2="302" y2="747" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="307" y="751" class="lot-label">43</text>
             </g>
             <g class="lot-group" data-lot="44">
-              <polygon class="lot-rect" points="265,752 305,757 350,778 310,772"/>
-              <line x1="327" y1="767" x2="362" y2="773" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="367" y="777" class="lot-label">44</text>
+              <polygon class="lot-rect" points="240,755 280,755 315,780 275,780"/>
+              <line x1="297" y1="767" x2="335" y2="772" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="340" y="776" class="lot-label">44</text>
             </g>
             <g class="lot-group" data-lot="45">
-              <polygon class="lot-rect" points="310,772 350,778 400,798 365,791"/>
-              <line x1="375" y1="788" x2="412" y2="795" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="417" y="799" class="lot-label">45</text>
+              <polygon class="lot-rect" points="275,780 315,780 365,810 325,810"/>
+              <line x1="340" y1="795" x2="380" y2="802" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="385" y="806" class="lot-label">45</text>
             </g>
             <g class="lot-group" data-lot="46">
-              <polygon class="lot-rect" points="365,791 400,798 455,815 420,808"/>
-              <line x1="427" y1="806" x2="465" y2="815" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="470" y="819" class="lot-label">46</text>
+              <polygon class="lot-rect" points="325,810 365,810 420,835 380,835"/>
+              <line x1="392" y1="822" x2="435" y2="830" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="440" y="834" class="lot-label">46</text>
             </g>
             
           </g>
