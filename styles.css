@@ -820,6 +820,7 @@ img {
 
 /* ===== Interactive Lot Map ===== */
 .lot-map-container {
+  position: relative;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: rgba(17, 26, 46, 0.35);
@@ -827,49 +828,105 @@ img {
   margin-top: 16px;
 }
 
+.map-legend {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(11, 18, 32, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.legend-color {
+  width: 18px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legend-available {
+  background: #4a9a5a;
+  border: 1px solid #6aba7a;
+}
+
+.legend-sold {
+  background: #6a6a6a;
+  border: 1px solid #8a8a8a;
+}
+
 .lot-map {
   width: 100%;
   height: auto;
-  max-height: 700px;
+  max-height: 600px;
   display: block;
 }
 
-.lot-polygon {
+.lot-group {
   cursor: pointer;
+}
+
+.lot-rect {
   transition: all 0.2s ease;
-  stroke-width: 2;
+  stroke-width: 1.5;
 }
 
-.lot-polygon.lot-available {
-  fill: #3a7a4a;
-  stroke: #5a9a6a;
-}
-
-.lot-polygon.lot-available:hover {
+.lot-rect.lot-available {
   fill: #4a9a5a;
+  stroke: #6aba7a;
+}
+
+.lot-group:hover .lot-rect.lot-available {
+  fill: #5aba6a;
   stroke: #7dd3fc;
-  stroke-width: 3;
+  stroke-width: 2.5;
 }
 
-.lot-polygon.lot-sold {
-  fill: #4a4a4a;
-  stroke: #6a6a6a;
-}
-
-.lot-polygon.lot-sold:hover {
+.lot-rect.lot-sold {
   fill: #5a5a5a;
-  stroke: #8a8a8a;
-  stroke-width: 3;
+  stroke: #7a7a7a;
 }
 
-.lot-labels text {
+.lot-group:hover .lot-rect.lot-sold {
+  fill: #6a6a6a;
+  stroke: #9a9a9a;
+  stroke-width: 2.5;
+}
+
+.lot-number {
   fill: #ffffff;
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   text-anchor: middle;
   pointer-events: none;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+  .lot-map {
+    max-height: 500px;
+  }
+  
+  .map-legend {
+    top: 8px;
+    right: 8px;
+    padding: 8px 12px;
+  }
+  
+  .legend-item {
+    font-size: 11px;
+  }
 }
 
 .lots-toolbar {
