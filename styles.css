@@ -1206,6 +1206,12 @@ input, select, textarea {
   transition: border-color 0.2s ease;
 }
 
+/* Fix dropdown option text on white background */
+select option {
+  background: #1a2a3a;
+  color: var(--text);
+}
+
 input:focus, select:focus, textarea:focus {
   border-color: var(--accent);
 }
