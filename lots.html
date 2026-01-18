@@ -67,242 +67,253 @@
           </div>
         </div>
         
-        <svg class="lot-map" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet">
+        <svg class="lot-map" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#1e5a6e"/>
-              <stop offset="100%" style="stop-color:#2a7a8e"/>
+            <linearGradient id="waterGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#1a5a6a"/>
+              <stop offset="100%" style="stop-color:#2a7a8a"/>
             </linearGradient>
-            <linearGradient id="landGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" style="stop-color:#5a7a4a"/>
-              <stop offset="100%" style="stop-color:#4a6a3a"/>
+            <linearGradient id="landGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4a6a3a"/>
+              <stop offset="100%" style="stop-color:#3a5a2a"/>
             </linearGradient>
           </defs>
           
-          <!-- Lake (surrounds all lots - top and wrapping around right side) -->
-          <path d="M0,0 L1200,0 L1200,700 L0,700 Z" fill="url(#waterGradient)"/>
+          <!-- Lake background -->
+          <rect x="0" y="0" width="400" height="900" fill="url(#waterGradient)"/>
           
-          <!-- Land peninsula where lots sit -->
-          <path d="M0,150 
-                   L80,140 L120,155 L160,150 L200,160 L240,155 L280,165 L320,160 L360,175 L400,170 
-                   L440,185 L480,180 L520,195 L560,195 L600,210 L640,220 L680,240 L720,260
-                   L760,290 L800,320 L840,360 L880,400 L920,450 L960,510 L1000,560 
-                   L1000,700 L0,700 Z" 
+          <!-- Land peninsula -->
+          <path d="M120,0 L280,0 L280,50 
+                   L260,55 L270,80 L265,110 L275,140 L270,170 L280,200 
+                   L285,230 L290,260 L295,290 L300,320 L305,350 
+                   L310,380 L312,410 L315,440 L318,470 L320,500 
+                   L322,530 L325,560 L328,590 L332,620 L340,650 
+                   L355,680 L380,710 L400,740 L400,900 
+                   L0,900 L0,740 L30,720 L60,690 L90,665 
+                   L105,640 L115,610 L120,580 L122,550 
+                   L120,520 L115,490 L112,460 L110,430 
+                   L108,400 L105,370 L100,340 L95,310 
+                   L92,280 L90,250 L92,220 L95,190 
+                   L100,160 L105,130 L110,100 L115,70 
+                   L118,40 L120,0 Z" 
                 fill="url(#landGradient)"/>
           
-          <!-- Road along the lots -->
-          <path d="M50,220 L100,215 L150,225 L200,230 L250,235 L300,245 L350,250 L400,260 
-                   L450,270 L500,280 L550,295 L600,315 L650,340 L700,370 
-                   L750,410 L800,450 L850,500 L900,560 L950,620" 
-                fill="none" stroke="#7a7a60" stroke-width="8" opacity="0.4" stroke-linecap="round"/>
-          
           <!-- Lake label -->
-          <text x="100" y="60" fill="rgba(255,255,255,0.3)" font-size="32" font-family="Cormorant Garamond, serif" 
-                font-style="italic">Shannon Lake</text>
+          <text x="45" y="400" fill="rgba(255,255,255,0.25)" font-size="20" font-family="Cormorant Garamond, serif" 
+                font-style="italic" writing-mode="tb" text-anchor="middle">Shannon Lake</text>
           
-          <!-- LOT GROUPS - Following the shoreline diagonal -->
+          <!-- LOT GROUPS - Based on aerial photos -->
           <g id="lotPolygons">
             
-            <!-- Lots 1-10: Top-left section, gentle diagonal -->
+            <!-- Lots 1-8: Top diagonal strip, single file angled ~45° -->
             <g class="lot-group" data-lot="1">
-              <rect x="60" y="160" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-5, 76, 182)"/>
-              <text x="76" y="186" class="lot-number">1</text>
+              <rect x="128" y="22" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 142, 41)"/>
+              <text x="142" y="44" class="lot-number">1</text>
             </g>
             <g class="lot-group" data-lot="2">
-              <rect x="95" y="163" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-5, 111, 185)"/>
-              <text x="111" y="189" class="lot-number">2</text>
+              <rect x="138" y="48" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 152, 67)"/>
+              <text x="152" y="70" class="lot-number">2</text>
             </g>
             <g class="lot-group" data-lot="3">
-              <rect x="130" y="166" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-3, 146, 188)"/>
-              <text x="146" y="192" class="lot-number">3</text>
+              <rect x="148" y="74" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 162, 93)"/>
+              <text x="162" y="96" class="lot-number">3</text>
             </g>
             <g class="lot-group" data-lot="4">
-              <rect x="165" y="170" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-3, 181, 192)"/>
-              <text x="181" y="196" class="lot-number">4</text>
+              <rect x="158" y="100" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 172, 119)"/>
+              <text x="172" y="122" class="lot-number">4</text>
             </g>
             <g class="lot-group" data-lot="5">
-              <rect x="200" y="175" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-2, 216, 197)"/>
-              <text x="216" y="201" class="lot-number">5</text>
+              <rect x="168" y="126" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 182, 145)"/>
+              <text x="182" y="148" class="lot-number">5</text>
             </g>
             <g class="lot-group" data-lot="6">
-              <rect x="235" y="180" width="32" height="45" rx="3" class="lot-rect" transform="rotate(-2, 251, 202)"/>
-              <text x="251" y="206" class="lot-number">6</text>
+              <rect x="178" y="152" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 192, 171)"/>
+              <text x="192" y="174" class="lot-number">6</text>
             </g>
             <g class="lot-group" data-lot="7">
-              <rect x="270" y="186" width="32" height="45" rx="3" class="lot-rect" transform="rotate(0, 286, 208)"/>
-              <text x="286" y="212" class="lot-number">7</text>
+              <rect x="188" y="178" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 202, 197)"/>
+              <text x="202" y="200" class="lot-number">7</text>
             </g>
             <g class="lot-group" data-lot="8">
-              <rect x="305" y="192" width="32" height="45" rx="3" class="lot-rect" transform="rotate(2, 321, 214)"/>
-              <text x="321" y="218" class="lot-number">8</text>
+              <rect x="198" y="204" width="28" height="38" rx="2" class="lot-rect" transform="rotate(42, 212, 223)"/>
+              <text x="212" y="226" class="lot-number">8</text>
             </g>
+            
+            <!-- Lots 9-18: Two columns side by side -->
+            <!-- Left column: 9,11,13,15,17 | Right column: 10,12,14,16,18 -->
             <g class="lot-group" data-lot="9">
-              <rect x="340" y="200" width="32" height="45" rx="3" class="lot-rect" transform="rotate(3, 356, 222)"/>
-              <text x="356" y="226" class="lot-number">9</text>
+              <rect x="195" y="238" width="28" height="32" rx="2" class="lot-rect" transform="rotate(35, 209, 254)"/>
+              <text x="209" y="257" class="lot-number">9</text>
             </g>
             <g class="lot-group" data-lot="10">
-              <rect x="375" y="208" width="32" height="45" rx="3" class="lot-rect" transform="rotate(5, 391, 230)"/>
-              <text x="391" y="234" class="lot-number">10</text>
+              <rect x="225" y="232" width="28" height="32" rx="2" class="lot-rect" transform="rotate(35, 239, 248)"/>
+              <text x="239" y="251" class="lot-number">10</text>
             </g>
             
-            <!-- Lots 11-19: Continuing diagonal, getting steeper -->
             <g class="lot-group" data-lot="11">
-              <rect x="410" y="218" width="32" height="45" rx="3" class="lot-rect" transform="rotate(7, 426, 240)"/>
-              <text x="426" y="244" class="lot-number">11</text>
+              <rect x="200" y="268" width="28" height="32" rx="2" class="lot-rect" transform="rotate(32, 214, 284)"/>
+              <text x="214" y="287" class="lot-number">11</text>
             </g>
             <g class="lot-group" data-lot="12">
-              <rect x="443" y="230" width="32" height="45" rx="3" class="lot-rect" transform="rotate(10, 459, 252)"/>
-              <text x="459" y="256" class="lot-number">12</text>
+              <rect x="230" y="263" width="28" height="32" rx="2" class="lot-rect" transform="rotate(32, 244, 279)"/>
+              <text x="244" y="282" class="lot-number">12</text>
             </g>
+            
             <g class="lot-group" data-lot="13">
-              <rect x="474" y="245" width="32" height="45" rx="3" class="lot-rect" transform="rotate(12, 490, 267)"/>
-              <text x="490" y="271" class="lot-number">13</text>
+              <rect x="203" y="298" width="28" height="32" rx="2" class="lot-rect" transform="rotate(28, 217, 314)"/>
+              <text x="217" y="317" class="lot-number">13</text>
             </g>
             <g class="lot-group" data-lot="14">
-              <rect x="503" y="262" width="32" height="45" rx="3" class="lot-rect" transform="rotate(15, 519, 284)"/>
-              <text x="519" y="288" class="lot-number">14</text>
+              <rect x="233" y="294" width="28" height="32" rx="2" class="lot-rect" transform="rotate(28, 247, 310)"/>
+              <text x="247" y="313" class="lot-number">14</text>
             </g>
+            
             <g class="lot-group" data-lot="15">
-              <rect x="530" y="282" width="32" height="45" rx="3" class="lot-rect" transform="rotate(18, 546, 304)"/>
-              <text x="546" y="308" class="lot-number">15</text>
+              <rect x="205" y="328" width="28" height="32" rx="2" class="lot-rect" transform="rotate(25, 219, 344)"/>
+              <text x="219" y="347" class="lot-number">15</text>
             </g>
             <g class="lot-group" data-lot="16">
-              <rect x="555" y="305" width="32" height="45" rx="3" class="lot-rect" transform="rotate(20, 571, 327)"/>
-              <text x="571" y="331" class="lot-number">16</text>
+              <rect x="235" y="325" width="28" height="32" rx="2" class="lot-rect" transform="rotate(25, 249, 341)"/>
+              <text x="249" y="344" class="lot-number">16</text>
             </g>
+            
             <g class="lot-group" data-lot="17">
-              <rect x="578" y="330" width="32" height="45" rx="3" class="lot-rect" transform="rotate(22, 594, 352)"/>
-              <text x="594" y="356" class="lot-number">17</text>
+              <rect x="206" y="358" width="28" height="32" rx="2" class="lot-rect" transform="rotate(22, 220, 374)"/>
+              <text x="220" y="377" class="lot-number">17</text>
             </g>
             <g class="lot-group" data-lot="18">
-              <rect x="598" y="358" width="32" height="45" rx="3" class="lot-rect" transform="rotate(25, 614, 380)"/>
-              <text x="614" y="384" class="lot-number">18</text>
+              <rect x="236" y="356" width="28" height="32" rx="2" class="lot-rect" transform="rotate(22, 250, 372)"/>
+              <text x="250" y="375" class="lot-number">18</text>
             </g>
+            
+            <!-- Lots 19-34: Continue as pairs going down -->
             <g class="lot-group" data-lot="19">
-              <rect x="615" y="388" width="32" height="45" rx="3" class="lot-rect" transform="rotate(28, 631, 410)"/>
-              <text x="631" y="414" class="lot-number">19</text>
+              <rect x="206" y="388" width="28" height="32" rx="2" class="lot-rect" transform="rotate(18, 220, 404)"/>
+              <text x="220" y="407" class="lot-number">19</text>
             </g>
-            
-            <!-- Lots 20-21: The bend - side by side -->
             <g class="lot-group" data-lot="20">
-              <rect x="655" y="385" width="32" height="45" rx="3" class="lot-rect" transform="rotate(30, 671, 407)"/>
-              <text x="671" y="411" class="lot-number">20</text>
-            </g>
-            <g class="lot-group" data-lot="21">
-              <rect x="655" y="432" width="32" height="45" rx="3" class="lot-rect" transform="rotate(30, 671, 454)"/>
-              <text x="671" y="458" class="lot-number">21</text>
+              <rect x="236" y="387" width="28" height="32" rx="2" class="lot-rect" transform="rotate(18, 250, 403)"/>
+              <text x="250" y="406" class="lot-number">20</text>
             </g>
             
-            <!-- Lots 22-27: After the bend, continuing down -->
-            <g class="lot-group" data-lot="22">
-              <rect x="632" y="435" width="32" height="45" rx="3" class="lot-rect" transform="rotate(32, 648, 457)"/>
-              <text x="648" y="461" class="lot-number">22</text>
+            <g class="lot-group" data-lot="21">
+              <rect x="205" y="418" width="28" height="32" rx="2" class="lot-rect" transform="rotate(15, 219, 434)"/>
+              <text x="219" y="437" class="lot-number">21</text>
             </g>
+            <g class="lot-group" data-lot="22">
+              <rect x="235" y="418" width="28" height="32" rx="2" class="lot-rect" transform="rotate(15, 249, 434)"/>
+              <text x="249" y="437" class="lot-number">22</text>
+            </g>
+            
             <g class="lot-group" data-lot="23">
-              <rect x="648" y="478" width="32" height="45" rx="3" class="lot-rect" transform="rotate(35, 664, 500)"/>
-              <text x="664" y="504" class="lot-number">23</text>
+              <rect x="203" y="448" width="28" height="32" rx="2" class="lot-rect" transform="rotate(12, 217, 464)"/>
+              <text x="217" y="467" class="lot-number">23</text>
             </g>
             <g class="lot-group" data-lot="24">
-              <rect x="665" y="520" width="32" height="45" rx="3" class="lot-rect" transform="rotate(38, 681, 542)"/>
-              <text x="681" y="546" class="lot-number">24</text>
+              <rect x="233" y="449" width="28" height="32" rx="2" class="lot-rect" transform="rotate(12, 247, 465)"/>
+              <text x="247" y="468" class="lot-number">24</text>
             </g>
+            
             <g class="lot-group" data-lot="25">
-              <rect x="685" y="560" width="32" height="45" rx="3" class="lot-rect" transform="rotate(40, 701, 582)"/>
-              <text x="701" y="586" class="lot-number">25</text>
+              <rect x="200" y="478" width="28" height="32" rx="2" class="lot-rect" transform="rotate(10, 214, 494)"/>
+              <text x="214" y="497" class="lot-number">25</text>
             </g>
             <g class="lot-group" data-lot="26">
-              <rect x="708" y="598" width="32" height="45" rx="3" class="lot-rect" transform="rotate(42, 724, 620)"/>
-              <text x="724" y="624" class="lot-number">26</text>
-            </g>
-            <g class="lot-group" data-lot="27">
-              <rect x="735" y="632" width="32" height="42" rx="3" class="lot-rect" transform="rotate(45, 751, 653)"/>
-              <text x="751" y="656" class="lot-number">27</text>
+              <rect x="230" y="480" width="28" height="32" rx="2" class="lot-rect" transform="rotate(10, 244, 496)"/>
+              <text x="244" y="499" class="lot-number">26</text>
             </g>
             
-            <!-- Lots 28-34: Second column parallel to 22-27 (inland side) -->
-            <g class="lot-group" data-lot="28">
-              <rect x="690" y="432" width="32" height="45" rx="3" class="lot-rect" transform="rotate(30, 706, 454)"/>
-              <text x="706" y="458" class="lot-number">28</text>
+            <g class="lot-group" data-lot="27">
+              <rect x="196" y="508" width="28" height="32" rx="2" class="lot-rect" transform="rotate(8, 210, 524)"/>
+              <text x="210" y="527" class="lot-number">27</text>
             </g>
+            <g class="lot-group" data-lot="28">
+              <rect x="226" y="511" width="28" height="32" rx="2" class="lot-rect" transform="rotate(8, 240, 527)"/>
+              <text x="240" y="530" class="lot-number">28</text>
+            </g>
+            
             <g class="lot-group" data-lot="29">
-              <rect x="705" y="475" width="32" height="45" rx="3" class="lot-rect" transform="rotate(33, 721, 497)"/>
-              <text x="721" y="501" class="lot-number">29</text>
+              <rect x="192" y="538" width="28" height="32" rx="2" class="lot-rect" transform="rotate(6, 206, 554)"/>
+              <text x="206" y="557" class="lot-number">29</text>
             </g>
             <g class="lot-group" data-lot="30">
-              <rect x="722" y="517" width="32" height="45" rx="3" class="lot-rect" transform="rotate(36, 738, 539)"/>
-              <text x="738" y="543" class="lot-number">30</text>
+              <rect x="222" y="542" width="28" height="32" rx="2" class="lot-rect" transform="rotate(6, 236, 558)"/>
+              <text x="236" y="561" class="lot-number">30</text>
             </g>
+            
             <g class="lot-group" data-lot="31">
-              <rect x="742" y="557" width="32" height="45" rx="3" class="lot-rect" transform="rotate(40, 758, 579)"/>
-              <text x="758" y="583" class="lot-number">31</text>
+              <rect x="188" y="568" width="28" height="32" rx="2" class="lot-rect" transform="rotate(5, 202, 584)"/>
+              <text x="202" y="587" class="lot-number">31</text>
             </g>
             <g class="lot-group" data-lot="32">
-              <rect x="765" y="595" width="32" height="45" rx="3" class="lot-rect" transform="rotate(42, 781, 617)"/>
-              <text x="781" y="621" class="lot-number">32</text>
+              <rect x="218" y="573" width="28" height="32" rx="2" class="lot-rect" transform="rotate(5, 232, 589)"/>
+              <text x="232" y="592" class="lot-number">32</text>
             </g>
+            
             <g class="lot-group" data-lot="33">
-              <rect x="792" y="630" width="32" height="42" rx="3" class="lot-rect" transform="rotate(45, 808, 651)"/>
-              <text x="808" y="654" class="lot-number">33</text>
+              <rect x="185" y="598" width="28" height="32" rx="2" class="lot-rect" transform="rotate(4, 199, 614)"/>
+              <text x="199" y="617" class="lot-number">33</text>
             </g>
             <g class="lot-group" data-lot="34">
-              <rect x="825" y="655" width="32" height="38" rx="3" class="lot-rect" transform="rotate(50, 841, 674)"/>
-              <text x="841" y="677" class="lot-number">34</text>
+              <rect x="215" y="604" width="28" height="32" rx="2" class="lot-rect" transform="rotate(4, 229, 620)"/>
+              <text x="229" y="623" class="lot-number">34</text>
             </g>
             
-            <!-- Lots 35-39: Continuing along bottom shore -->
+            <!-- Lots 35-39: Continuing down, then bend -->
             <g class="lot-group" data-lot="35">
-              <rect x="768" y="658" width="32" height="36" rx="3" class="lot-rect" transform="rotate(55, 784, 676)"/>
-              <text x="784" y="679" class="lot-number">35</text>
+              <rect x="183" y="628" width="28" height="32" rx="2" class="lot-rect" transform="rotate(3, 197, 644)"/>
+              <text x="197" y="647" class="lot-number">35</text>
             </g>
             <g class="lot-group" data-lot="36">
-              <rect x="805" y="665" width="32" height="32" rx="3" class="lot-rect" transform="rotate(60, 821, 681)"/>
-              <text x="821" y="684" class="lot-number">36</text>
+              <rect x="213" y="635" width="28" height="32" rx="2" class="lot-rect" transform="rotate(3, 227, 651)"/>
+              <text x="227" y="654" class="lot-number">36</text>
             </g>
+            
             <g class="lot-group" data-lot="37">
-              <rect x="845" y="665" width="32" height="32" rx="3" class="lot-rect" transform="rotate(65, 861, 681)"/>
-              <text x="861" y="684" class="lot-number">37</text>
+              <rect x="182" y="658" width="28" height="32" rx="2" class="lot-rect" transform="rotate(2, 196, 674)"/>
+              <text x="196" y="677" class="lot-number">37</text>
             </g>
             <g class="lot-group" data-lot="38">
-              <rect x="885" y="660" width="32" height="35" rx="3" class="lot-rect" transform="rotate(70, 901, 677)"/>
-              <text x="901" y="680" class="lot-number">38</text>
-            </g>
-            <g class="lot-group" data-lot="39">
-              <rect x="925" y="650" width="32" height="40" rx="3" class="lot-rect" transform="rotate(75, 941, 670)"/>
-              <text x="941" y="673" class="lot-number">39</text>
+              <rect x="212" y="666" width="28" height="32" rx="2" class="lot-rect" transform="rotate(2, 226, 682)"/>
+              <text x="226" y="685" class="lot-number">38</text>
             </g>
             
-            <!-- Lots 40-42: Vertical stack after 39 -->
-            <g class="lot-group" data-lot="40">
-              <rect x="965" y="620" width="35" height="35" rx="3" class="lot-rect" transform="rotate(80, 982, 637)"/>
-              <text x="982" y="640" class="lot-number">40</text>
+            <g class="lot-group" data-lot="39">
+              <rect x="185" y="692" width="28" height="32" rx="2" class="lot-rect" transform="rotate(5, 199, 708)"/>
+              <text x="199" y="711" class="lot-number">39</text>
             </g>
+            
+            <!-- Lots 40-46: Bottom section spreading right -->
+            <g class="lot-group" data-lot="40">
+              <rect x="215" y="700" width="28" height="32" rx="2" class="lot-rect" transform="rotate(15, 229, 716)"/>
+              <text x="229" y="719" class="lot-number">40</text>
+            </g>
+            
             <g class="lot-group" data-lot="41">
-              <rect x="985" y="580" width="35" height="35" rx="3" class="lot-rect" transform="rotate(82, 1002, 597)"/>
-              <text x="1002" y="600" class="lot-number">41</text>
+              <rect x="195" y="728" width="28" height="30" rx="2" class="lot-rect" transform="rotate(25, 209, 743)"/>
+              <text x="209" y="746" class="lot-number">41</text>
             </g>
             <g class="lot-group" data-lot="42">
-              <rect x="1005" y="540" width="35" height="35" rx="3" class="lot-rect" transform="rotate(85, 1022, 557)"/>
-              <text x="1022" y="560" class="lot-number">42</text>
+              <rect x="228" y="735" width="28" height="30" rx="2" class="lot-rect" transform="rotate(35, 242, 750)"/>
+              <text x="242" y="753" class="lot-number">42</text>
             </g>
             
-            <!-- Lots 43-44: Next to 42 -->
             <g class="lot-group" data-lot="43">
-              <rect x="1045" y="545" width="35" height="35" rx="3" class="lot-rect" transform="rotate(85, 1062, 562)"/>
-              <text x="1062" y="565" class="lot-number">43</text>
+              <rect x="215" y="765" width="28" height="28" rx="2" class="lot-rect" transform="rotate(45, 229, 779)"/>
+              <text x="229" y="782" class="lot-number">43</text>
             </g>
             <g class="lot-group" data-lot="44">
-              <rect x="1065" y="505" width="35" height="35" rx="3" class="lot-rect" transform="rotate(85, 1082, 522)"/>
-              <text x="1082" y="525" class="lot-number">44</text>
+              <rect x="250" y="760" width="28" height="28" rx="2" class="lot-rect" transform="rotate(50, 264, 774)"/>
+              <text x="264" y="777" class="lot-number">44</text>
             </g>
             
-            <!-- Lots 45-46: Furthest right, lakefront wraps around -->
             <g class="lot-group" data-lot="45">
-              <rect x="1105" y="510" width="35" height="35" rx="3" class="lot-rect" transform="rotate(85, 1122, 527)"/>
-              <text x="1122" y="530" class="lot-number">45</text>
+              <rect x="285" y="752" width="28" height="28" rx="2" class="lot-rect" transform="rotate(55, 299, 766)"/>
+              <text x="299" y="769" class="lot-number">45</text>
             </g>
             <g class="lot-group" data-lot="46">
-              <rect x="1125" y="470" width="35" height="35" rx="3" class="lot-rect" transform="rotate(85, 1142, 487)"/>
-              <text x="1142" y="490" class="lot-number">46</text>
+              <rect x="318" y="740" width="28" height="28" rx="2" class="lot-rect" transform="rotate(60, 332, 754)"/>
+              <text x="332" y="757" class="lot-number">46</text>
             </g>
             
           </g>
