@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | Shannon Lake Saskatchewan</title>
   <meta name="description" content="Request information about lots for sale or seasonal RV options at Shannon Lake, Saskatchewan (near Wakaw Lake, about 1 hour east of Saskatoon via Highway 41)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cinzel:wght@400;500;600&family=Josefin+Sans:wght@300;400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header site-header-solid">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html">Shannon Lake</a>
+      <a class="brand" href="index.html">
+        <svg class="brand-icon" viewBox="0 0 52 52" fill="none">
+          <circle cx="26" cy="26" r="24" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <line x1="10" y1="28" x2="42" y2="28" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <path d="M14 28 A12 12 0 0 1 38 28" stroke="#7dd3fc" stroke-width="2" fill="none"/>
+          <path d="M12 34 Q19 31, 26 34 T40 34" stroke="#7dd3fc" stroke-width="1.5" fill="none" opacity="0.7"/>
+          <path d="M14 38 Q21 35, 28 38 T42 38" stroke="#7dd3fc" stroke-width="1.5" fill="none" opacity="0.4"/>
+        </svg>
+        <span class="brand-wordmark">
+          <span class="brand-shannon">SHANNON</span>
+          <span class="brand-lake">LAKE</span>
+        </span>
+      </a>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="lots.html">Lots for Sale</a>
@@ -20,73 +35,62 @@
     </div>
   </header>
 
- <main class="wrap page">
-  <h1>Request Information</h1>
-  <p class="lead">
-    Tell us what you’re interested in and we’ll send you availability and next steps.
-    Prefer email? <a href="mailto:ljjansen6767@gmail.com">ljjansen6767@gmail.com</a>
-  </p>
-
-  <div class="card">
-    <form
-      method="POST"
-      action="https://formspree.io/f/xnjnkqzd"
-      accept-charset="UTF-8"
-    >
-      <!-- Redirect after successful submission -->
-      <input type="hidden" name="_redirect" value="https://shannon-lake.pages.dev/thanks.html" />
-<input type="hidden" name="_next" value="https://shannon-lake.pages.dev/thanks.html" />
-
-      <!-- Helpful email metadata -->
-      <input type="hidden" name="_subject" value="New Shannon Lake Website Lead" />
-
-      <label>
-        Full Name
-        <input type="text" name="name" autocomplete="name" required />
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" autocomplete="email" required />
-      </label>
-
-      <!-- Lets you hit Reply in the lead email and respond to the lead -->
-      <input type="hidden" name="_replyto" value="%{email}" />
-
-      <label>
-        Phone
-        <input type="tel" name="phone" autocomplete="tel" required />
-      </label>
-
-      <label>
-        I’m interested in
-        <select name="interest" required>
-          <option value="" selected disabled>Select one</option>
-          <option value="Buying a lake lot">Buying a lake lot</option>
-          <option value="Seasonal RV spot">Seasonal RV spot</option>
-          <option value="Both">Both</option>
-        </select>
-      </label>
-
-      <label>
-        Message (optional)
-        <textarea name="message" rows="4" placeholder="Any questions or timing?"></textarea>
-      </label>
-
-      <button class="btn" type="submit">Send</button>
-
-      <p class="muted small">
-        We’ll only use your info to respond to your request.
-      </p>
-    </form>
-  </div>
-</main>
-
-    <footer class="footer">
-      <p class="disclaimer">
-        Disclaimer: Information is subject to change without notice. Availability may change at any time.
-      </p>
-    </footer>
+  <main class="wrap page">
+    <h1>Request Information</h1>
+    <p class="lead">
+      Tell us what you're interested in and we'll send you availability and next steps.
+      Prefer email? <a href="mailto:ljjansen6767@gmail.com">ljjansen6767@gmail.com</a>
+    </p>
+    <div class="card">
+      <form
+        method="POST"
+        action="https://formspree.io/f/xnjnkqzd"
+        accept-charset="UTF-8"
+      >
+        <!-- Redirect after successful submission -->
+        <input type="hidden" name="_redirect" value="https://shannon-lake.pages.dev/thanks.html" />
+        <input type="hidden" name="_next" value="https://shannon-lake.pages.dev/thanks.html" />
+        <!-- Helpful email metadata -->
+        <input type="hidden" name="_subject" value="New Shannon Lake Website Lead" />
+        <label>
+          Full Name
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <!-- Lets you hit Reply in the lead email and respond to the lead -->
+        <input type="hidden" name="_replyto" value="%{email}" />
+        <label>
+          Phone
+          <input type="tel" name="phone" autocomplete="tel" required />
+        </label>
+        <label>
+          I'm interested in
+          <select name="interest" required>
+            <option value="" selected disabled>Select one</option>
+            <option value="Buying a lake lot">Buying a lake lot</option>
+            <option value="Seasonal RV spot">Seasonal RV spot</option>
+            <option value="Both">Both</option>
+          </select>
+        </label>
+        <label>
+          Message (optional)
+          <textarea name="message" rows="4" placeholder="Any questions or timing?"></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+        <p class="muted small">
+          We'll only use your info to respond to your request.
+        </p>
+      </form>
+    </div>
   </main>
+
+  <footer class="footer">
+    <p class="disclaimer">
+      Disclaimer: Information is subject to change without notice. Availability may change at any time.
+    </p>
+  </footer>
 </body>
 </html>
