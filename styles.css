@@ -869,7 +869,7 @@ img {
 .lot-map {
   width: 100%;
   height: auto;
-  max-height: 800px;
+  min-height: 400px;
   display: block;
 }
 
@@ -906,7 +906,7 @@ img {
 
 .lot-number {
   fill: #ffffff;
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   text-anchor: middle;
