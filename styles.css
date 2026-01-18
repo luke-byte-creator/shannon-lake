@@ -12,6 +12,8 @@
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-brand: 'Cinzel', serif;
+  --font-brand-sub: 'Josefin Sans', sans-serif;
   
   /* Spacing */
   --section-padding: 100px;
@@ -110,17 +112,49 @@ img {
   gap: 20px;
 }
 
+/* ===== Brand Logo (Option 2A) ===== */
 .brand {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 24px;
-  letter-spacing: 0.02em;
-  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
+  color: var(--text);
 }
 
 .brand:hover {
   color: var(--text);
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.brand-shannon {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.brand-lake {
+  font-family: var(--font-brand-sub);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: var(--accent);
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .nav {
@@ -168,7 +202,7 @@ img {
   font-size: clamp(36px, 6vw, 72px);
   font-weight: 500;
   line-height: 1.15;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   max-width: 900px;
 }
 
@@ -177,13 +211,13 @@ img {
   font-weight: 500;
 }
 
-/* New hero location subtitle - cleaner styling */
+/* Hero location subtitle - tighter spacing */
 .hero-location {
   font-family: var(--font-body);
   font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   letter-spacing: 0.02em;
 }
 
@@ -417,7 +451,7 @@ img {
   grid-row: span 2;
 }
 
-/* Gallery Labels */
+/* Gallery Labels - HOVER ONLY */
 .gallery-label {
   position: absolute;
   bottom: 16px;
@@ -431,12 +465,14 @@ img {
   backdrop-filter: blur(12px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
   transition: all 0.3s ease;
 }
 
 .gallery-item:hover .gallery-label {
-  background: rgba(11, 18, 32, 0.95);
-  border-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .gallery-label-text {
@@ -552,15 +588,29 @@ img {
   margin-bottom: 40px;
 }
 
-.footer-brand .brand {
-  display: block;
-  margin-bottom: 8px;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
 }
 
-.footer-tagline {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin: 0;
+.footer-brand:hover {
+  color: var(--text);
+}
+
+.footer-brand .brand-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-brand .brand-shannon {
+  font-size: 16px;
+}
+
+.footer-brand .brand-lake {
+  font-size: 9px;
 }
 
 .footer-nav {
@@ -682,6 +732,12 @@ img {
     height: 280px;
   }
   
+  /* Show labels on mobile since no hover */
+  .gallery-label {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   .location-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -694,6 +750,10 @@ img {
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .footer-brand {
+    justify-content: center;
   }
   
   .footer-nav {
