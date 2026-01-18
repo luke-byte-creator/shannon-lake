@@ -79,19 +79,21 @@
             </linearGradient>
           </defs>
           
-          <!-- Lake on left side -->
+          <!-- Lake on left side AND wrapping around bottom -->
           <path d="M0,0 L200,0 
                    Q220,100 210,200 
                    Q200,300 220,400 
                    Q240,500 220,600 
                    Q200,700 230,800 
-                   Q260,900 220,1000 
-                   L180,1100 L0,1100 Z" 
+                   Q260,900 240,950
+                   L280,980 L350,1000 L420,990 L500,970
+                   L500,1100 L0,1100 Z" 
                 fill="url(#waterGradient)"/>
           
-          <!-- Land on right -->
-          <path d="M200,0 L500,0 L500,1100 L180,1100
-                   Q260,900 220,800 
+          <!-- Land peninsula - surrounded by water -->
+          <path d="M200,0 L500,0 L500,970
+                   L420,990 L350,1000 L280,980 L240,950
+                   Q260,900 230,800 
                    Q200,700 220,600 
                    Q240,500 220,400 
                    Q200,300 210,200 
